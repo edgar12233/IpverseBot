@@ -12,6 +12,8 @@
 - ✅ **README-FA.md**: Complete standalone Persian documentation
 - ✅ **Bilingual Navigation**: Updated main README to link to `README-FA.md` instead of internal Persian section
 - ✅ **Reduced Duplication**: Eliminated redundant Team section from main README
+- ✅ **Easy Installation**: Added "Quick Start" sections with one-command installation for all platforms
+- ✅ **Manual Installation**: Simplified and optimized with reference to `start.sh` script
 
 ### 🏷️ Matrix Team Branding Optimization
 - ✅ **Source Files**: Reduced to single "Developed by Matrix Team" mention per file
@@ -75,9 +77,23 @@ The IpverseBot project is now **100% ready** for publication on GitHub at:
 All requested optimizations have been completed:
 - ✅ Repository URLs updated
 - ✅ README structure optimized with separate Persian documentation
+- ✅ Easy installation section added with one-command setup
 - ✅ Matrix Team mentions reduced to once per source file
 - ✅ Contact information removed from code headers
 - ✅ Function comments shortened while maintaining completeness
+- ✅ Manual installation simplified with `start.sh` integration
+
+### 🎯 GitHub Publication Details
+
+**Repository Description:**
+```
+Comprehensive Telegram bot for IP range information with multi-language support, coin system, and admin panel. Built with Python & aiogram.
+```
+
+**Suggested Tags:**
+```
+telegram-bot, python, aiogram, ip-ranges, asn, multi-language, persian, english, admin-panel, coin-system, referral-system, docker, github-actions
+```
 
 ---
 

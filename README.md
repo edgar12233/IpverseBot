@@ -27,45 +27,89 @@ IpverseBot is a comprehensive Telegram bot that provides IP range information fo
 - **💾 Smart Caching**: Intelligent file caching system to improve performance
 - **📈 User Analytics**: Track user statistics and bot usage metrics
 
-### 🛠️ Installation
+## 🚀 Quick Start (Easy Installation)
 
-#### Prerequisites
+Get your bot running in minutes with our automated setup script!
 
-- Python 3.8 or higher
-- A Telegram Bot Token (from [@BotFather](https://t.me/BotFather))
-- Your Telegram User ID
+### One-Command Installation
 
-#### Step 1: Clone the Repository
+```bash
+# Clone and run with automatic setup
+git clone https://github.com/Matrix-Community-ORG/IpverseBot.git && cd IpverseBot && chmod +x start.sh && ./start.sh
+```
 
+### Platform-Specific Commands
+
+#### 🐧 Linux/macOS
 ```bash
 git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
 cd IpverseBot
+chmod +x start.sh
+./start.sh
 ```
 
-#### Step 2: Install Dependencies
-
+#### 🪟 Windows (Git Bash/WSL)
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
+cd IpverseBot
+bash start.sh
 ```
 
-#### Step 3: Environment Configuration
-
-1. Copy the example environment file:
+#### 🐳 Docker (All Platforms)
 ```bash
-cp .env.example .env
+git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
+cd IpverseBot
+chmod +x start.sh
+./start.sh --docker
 ```
 
-2. Edit the `.env` file with your configuration:
-```env
-BOT_TOKEN=your_telegram_bot_token_here
-ADMIN_ID=your_telegram_user_id_here
-```
+### What the script does:
+- ✅ Checks Python version (3.8+)
+- ✅ Creates `.env` file from template
+- ✅ Installs all dependencies automatically
+- ✅ Sets up data directories
+- ✅ Validates configuration
+- ✅ Starts the bot
 
-#### Step 4: Run the Bot
+> **Note**: You'll need to add your bot token and admin ID to the `.env` file when prompted.
 
-```bash
-python main.py
-```
+---
+
+## 🛠️ Manual Installation
+
+If you prefer step-by-step setup or need more control:
+
+### Prerequisites
+
+- Python 3.8 or higher
+- A Telegram Bot Token (from [@BotFather](https://t.me/BotFather))
+- Your Telegram User ID (get from [@userinfobot](https://t.me/userinfobot))
+
+### Step-by-Step Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
+   cd IpverseBot
+   ```
+
+2. **Set up configuration:**
+   ```bash
+   cp .env.example .env
+   # Edit .env file with your bot token and admin ID
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the bot:**
+   ```bash
+   python main.py
+   ```
+
+> **Pro Tip**: Use `./start.sh` for automated setup, or `./start.sh --help` to see all options.
 
 ### 📋 Configuration
 
